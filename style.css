@@ -7,6 +7,13 @@
 .navbar-brand {
   font-size: 1.5rem;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
 
 .navbar .form-control {
   max-width: 600px;
@@ -55,57 +62,82 @@ section {
   justify-content: center;
 }
 
+#container1 {
+  position: sticky;
+  top: 0; /* Distance from the top */
+  z-index: 1020; /* Ensure it stays above other elements */
+  background-color: white; /* Optional: To ensure visibility */
+}
+
 .card {
-  width: 10rem;
-  border-radius: 10px;
+  width:18rem; /* Standard width */
+  height:25rem; /* Fixed card height */
+  border-radius: 8px; /* Slightly rounded corners */
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Hover effect */
 }
 
 .card-img-top {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 180px; /* Fixed height for images */
+  object-fit: cover; /* Ensures images fit nicely */
 }
 
 .card-body {
-  padding: 15px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Ensures consistent height distribution */
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+  white-space: nowrap; /* Keep text on a single line */
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
   margin-bottom: 10px;
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for long descriptions */
+  display: -webkit-box; /* For multi-line ellipsis */
+  -webkit-line-clamp:3; /* Show only 3 lines of text */
+  -webkit-box-orient: vertical;
 }
 
 .card-price {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #e67e22;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .card .btn {
   background-color: #3498db;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 4px;
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s;
+  font-size: 0.9rem;
+  align-self: flex-end; /* Align button to the bottom */
 }
 
 .card .btn:hover {
@@ -114,6 +146,57 @@ section {
 
 .card img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio:16/9;
   object-fit: contain;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+.footer a {
+  color: #343a40;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .social-icons a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #343a40;
+}
+.footer .social-icons a:hover {
+  color: #0d6efd;
+}
+
+.app-section.footer {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 40px 20px;
+  border-bottom: 2px solid #dee2e6; /* Adds bottom border */
+}
+.app-section .app-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.app-section h5 {
+  font-weight: bold;
+  color: #002f34; /* OLX brand dark green */
+  margin-bottom: 15px;
+}
+.app-section p {
+  color: #5f6368; /* Subtle gray text */
+}
+.app-section .app-buttons img {
+  max-width: 140px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.app-section .app-buttons img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.app-section .app-buttons a:not(:last-child) {
+  margin-right: 10px;
 }

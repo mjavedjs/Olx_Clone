@@ -14,14 +14,13 @@ fetch('https://dummyjson.com/products')
     data.map((item,index) => {
       // Append each card to the container
       container.innerHTML += `
-        <div class="card" style="width: 18rem; margin: 10px;">
+        <div class="card" style="width:18rem; margin: 10px;">
           <img class="card-img-top" src="${item.thumbnail}" alt="${item.title}">
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.description}</p>
             <p class="card-price">Price: $${item.price}</p>
               <a href="#" class="btn btn-primary" onclick="addtoCart(${item.id})">Buy Now</a>
-
           </div>
         </div>
       `;
@@ -66,16 +65,17 @@ function userSearch() {
       if (searchResults.length > 0) {
         searchResults.forEach((item) => {
           serachItem.innerHTML += `
-            <div class="card" style="width: 18rem; margin: 10px;">
-              <img class="card-img-top" src="${item.thumbnail}" alt="${item.title}">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text">${item.description}</p>
-                <p class="card-price">Price: $${item.price}</p>
-              </div>
-            </div>
+            <div class="card" style="width:20rem; height:auto; margin: 10px; display: flex; flex-direction: column; justify-content: space-between;">
+  <img class="card-img-top" src="${item.thumbnail}" alt="${item.title}">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">${item.title}</h5>
+    <p class="card-text flex-grow-1">${item.description}</p>
+    <p class="card-price mt-auto">Price: $${item.price}</p>
+  </div>
+</div>
+
           `;
-  checkbtn.disabled = true
+  checkbtn.disabled = true;
 
         });
         container.innerHTML = " "
