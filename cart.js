@@ -1,5 +1,4 @@
 
-
 let userdata = JSON.parse(localStorage.getItem("cartItems")) || []; // Ensure userdata is an array
 let container = document.querySelector(".container-1");
 
@@ -21,7 +20,6 @@ if (userdata.length === 0) {
               <h5 class="card-title">${product.title}</h5>
               <p class="card-text">${product.description}</p>
               <p class="card-price">Price: $${product.price}</p>
-              <a href="#" class="btn btn-primary" onclick="addtoCart(${item.id})">Buy Now</a>
             </div>
           </div>
         `;
@@ -32,3 +30,5 @@ if (userdata.length === 0) {
       });
   });
 }
+
+

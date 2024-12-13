@@ -1,90 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/a792d62b7d.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a792d62b7d.js" crossorigin="anonymous"></script>
+  <title>Cart System</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
     <div class="container">
-      <!-- Brand -->
-      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="./index.html">
-        OLX
-      </a>
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
+      <a class="navbar-brand fw-bold text-primary" href="./index.html">OLX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-4">
-          <!-- Search with Icon -->
           <li class="nav-item">
             <div class="input-group rounded-pill">
-              <span class="input-group-text bg-white border-end-0" id="search-addon">
-                <i class="fa-solid fa-search text-muted"></i>
-              </span>
-              <input type="search" class="form-control rounded-end border-start-0 px-3   " placeholder="Search items" aria-label="Search items"  id="userinput">
+              <input type="search" id="userinput" class="form-control rounded-end border-start-0" placeholder="Search items">
             </div>
           </li>
-          <li class="nav-item d-flex align-items-center">
-            <!-- Icon -->
-            <i class="fa-solid fa-globe me-3 text-muted"></i>
-            <!-- Select Dropdown -->
-                <select class="form-select rounded-pill px-4 pe-5" aria-label="Select Country">
-                    <option selected>Select Country</option>
-                    <option value="1">Pakistan</option>
-                    <option value="2">India</option>
-                    <option value="3">USA</option>
-                  </select>
-                  
-          </li>
-          
-          <!-- Dropdown for Categories -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-muted" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa-solid fa-list"></i> Categories
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="categoryDropdown" >
-              <li><a class="dropdown-item" href="#">Cars</a></li>
-              <li><a class="dropdown-item" href="#">Bikes</a></li>
-              <li><a class="dropdown-item" href="#">Trucks</a></li>
-              <li><a class="dropdown-item" href="#">Buses</a></li>
-            </ul>
-          </li>
-          <!-- Icons -->
           <li class="nav-item">
-            <a href="#" class="nav-link text-muted position-relative">
-              <a class="nav-link" href="#" id="icon">
-                <i class="fa-solid fa-truck"></i> <span>0</span>
-              </a>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-muted">
-              <i class="fa-solid fa-bell"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-muted">
-              <i class="fa-solid fa-user"></i>
+            <a class="nav-link" href="#" id="icon">
+              <i class="fa-solid fa-truck"></i> <span>0</span>
             </a>
           </li>
         </ul>
       </div>
     </div>
-
   </nav>
-    <div class="container-1 d-flex justify-content-center align-items-center mt-5" style="height: 60vh;">
-    </div>
-    
-    <script src="cart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <div class="container-1 d-flex flex-wrap justify-content-center align-items-center mt-5" style="min-height: 60vh;">
+  </div>
+  <section class="text-center mb-5">
+    <button type="button" class="btn btn-primary btn-sm" id="CHECK" onclick="checkout()">CHECKOUT</button>
+  </section>
+  <script src="cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

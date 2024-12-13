@@ -200,3 +200,23 @@ section {
 .app-section .app-buttons a:not(:last-child) {
   margin-right: 10px;
 }
+.navbar-nav .nav-item i {
+  font-size: 1.2rem; /* Adjust icon size */
+  line-height: 1; /* Proper alignment with text */
+  vertical-align: middle; /* Ensure alignment */
+  margin-right: 0.5rem; /* Add spacing to the right */
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.input-group .form-control {
+  border-radius: 50px !important; /* Smooth rounded edges */
+}
+
+.input-group .input-group-text {
+  border-radius: 50px !important; /* Smooth rounded edges */
+  background: none; /* Remove background for better alignment */
+}
